@@ -1,10 +1,34 @@
-﻿@{
+﻿@model AppConsultaZoho.Models.ContactView
+@{
     ViewBag.Title = "Home Page";
 }
 
 
 <div class="panel panel-primary panel-body">
     <div class="col-md-12">
-        @Html.ActionLink("ConsultarZoho", "ConsultaZoho", new { id = 1 }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Consultar - RefreshToken", "GetRefreshToken", new { id = 1 }, new { @class = "btn btn-warning" })
+        @Html.ActionLink("Consultar Zoho - Usando RefreshToken", "GetContactByPhone", new { id = 1 }, new { @class = "btn btn-primary" })
+    </div>
+</div>
+<div class="panel panel-primary panel-body">
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m => m.NombreCompleto)
+            <div class="form-control">
+                @Html.DisplayTextFor(m => m.NombreCompleto)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.CorreoElectronico)
+            <div class="form-control">
+                @Html.DisplayTextFor(m => m.CorreoElectronico)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Producto)
+            <div class="form-control">
+                @Html.DisplayTextFor(m => m.Producto)
+            </div>
+        </div>
     </div>
 </div>

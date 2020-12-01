@@ -5,17 +5,22 @@ namespace AppConsultaZoho.Models
     public class Zoho
     {
         public Dictionary<string, string> dict { get; set; }
+
+        //SELF CLIENT
         public Zoho()
         {
             dict = new Dictionary<string, string>();
-            dict.Add("client_id", "XXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-            dict.Add("client_secret", "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
-            dict.Add("redirect_uri", "https://localhost:44312/Callback");
-            dict.Add("response_type", "code");
-            dict.Add("access_type", "offline");
-            dict.Add("scope", "ZohoCRM.modules.ALL");
+            dict.Add("code", "XXXXXXXXXXXXXXXXX");
+            
+            dict.Add("redirect_uri", "https://localhost:44312/");
+
+            dict.Add("client_id", "YYYYYYYYYYYYYY");
+            dict.Add("client_secret", "ZZZZZZZZZZZZZZZ");
             dict.Add("grant_type", "authorization_code");
-            dict.Add("authorization_code", string.Empty);
+
+            dict.Add("refresh_token", "WWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+
+            dict.Add("scope", "ZohoCRM.modules.ALL");
         }
     }
     public class Token
